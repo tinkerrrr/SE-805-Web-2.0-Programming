@@ -17,6 +17,8 @@ def signal_handler(signum, frame):
     logging.info('exiting...')
     is_closing = True
 
+    
+# try_exit
 def try_exit(): 
     global is_closing
     if is_closing:    
