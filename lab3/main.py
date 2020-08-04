@@ -38,6 +38,7 @@ class item:
 
 # getAllFiles
 # update2
+# update3
 def getAllFiles():
     allFile = []
     mypath = "static/songs"
