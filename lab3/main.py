@@ -11,7 +11,7 @@ from tornado.options import options
 from tornado.options import define, options
 define("port", default=8888, help="run on the given port", type=int)
 
-
+# signal_handler
 def signal_handler(signum, frame):
     global is_closing
     logging.info('exiting...')
@@ -63,6 +63,7 @@ class IndexHandler(tornado.web.RequestHandler):
         self.render('music.html', allFile=allFile)
 
 if __name__ == "__main__":
+    ## aa
     tornado.options.parse_command_line()
     app = tornado.web.Application(
         handlers=[(r'/', IndexHandler)],
