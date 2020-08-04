@@ -37,6 +37,7 @@ class item:
             self.size = "%d mb" % (size/(1024*1024))
 
 # getAllFiles
+# update2
 def getAllFiles():
     allFile = []
     mypath = "static/songs"
