@@ -17,11 +17,11 @@ def signal_handler(signum, frame):
     logging.info('exiting...')
     is_closing = True
 
-    
+
 # try_exit
-def try_exit(): 
+def try_exit():
     global is_closing
-    if is_closing:    
+    if is_closing:
         tornado.ioloop.IOLoop.instance().stop()
         logging.info('exit success')
 
@@ -39,6 +39,7 @@ class item:
 # getAllFiles
 # update2
 # update3
+# update4
 def getAllFiles():
     allFile = []
     mypath = "static/songs"
@@ -52,7 +53,7 @@ class IndexHandler(tornado.web.RequestHandler):
     def get(self):
         playlist = self.get_argument("playlist", "hehe")
         allFile = []
-        mypath = "static/songs"        
+        mypath = "static/songs"
         if playlist != 'hehe':
             txt = open(mypath + '/' + playlist)
             filenames = txt.read().splitlines()
